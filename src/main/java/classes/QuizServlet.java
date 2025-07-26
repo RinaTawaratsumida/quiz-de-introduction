@@ -7,7 +7,6 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Random;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -52,10 +51,20 @@ public class QuizServlet extends HttpServlet {
 		try {
 			Class.forName("org.postgresql.Driver");
 			conn = DriverManager.getConnection(dbUrl, dbUserName, dbPassword);
-			Random rand = new Random();
-			int num = rand.nextInt(10) + 1;
-			System.out.println(num);
-
+			
+			//乱数で出た数字をsql検索で参照する
+			//Random rand = new Random();
+			//int num = rand.nextInt(10) + 1;
+			int num = 1;//テスト用
+			//System.out.println(num);
+			
+			//実際のsqlを検索するための実行分を作成し、numの内容を参照して実行
+			String sql_quiz = "SELECT * FROM quiz where quizid = ?";
+			stmt = conn.prepareStatement(sql_quiz); // ← SQLを準備
+			stmt.setInt(1, num); // ← パラメータをバインド
+			rs = stmt.executeQuery(); // ← クエリを実行
+			System.out.println(rs);
+			
 		} catch (SQLException e) {
 			e.printStackTrace();
 			out.println("<p>データベースエラー: " + e.getMessage() + "</p>");
