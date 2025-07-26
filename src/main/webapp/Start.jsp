@@ -10,8 +10,8 @@
 <body>
 	<!-- -->
 	<div id=start>
-		<form action="start" method="get">
-			<input type ="button" value="start" id="startBtn">
+		<form action="QuizServlet" method="get">
+			<input type ="submit" value="start" id="startBtn">
 		</form> 
 	</div>
 </body>
