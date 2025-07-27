@@ -96,10 +96,14 @@ public class QuizServlet extends HttpServlet {
 				    request.setAttribute("choice1", choice1);
 				    request.setAttribute("choice2", choice2);
 				    request.setAttribute("choice3", choice3);
+				    
+				    request.getRequestDispatcher("/selectQuiz.jsp").forward(request, response);
+			    }else{
+				    request.getRequestDispatcher("/textQuiz.jsp").forward(request, response);
 			    }
 
 
-			    request.getRequestDispatcher("/question.jsp").forward(request, response);
+
 			} else {
 			    out.println("<p>問題が見つかりませんでした。</p>");
 			}
