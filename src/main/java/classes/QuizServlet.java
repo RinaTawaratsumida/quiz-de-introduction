@@ -92,10 +92,12 @@ public class QuizServlet extends HttpServlet {
 				    String choice1 = rs.getString("choice1");
 				    String choice2 = rs.getString("choice2");
 				    String choice3 = rs.getString("choice3");
+				    String choice4 = rs.getString("choice4");
 				    
 				    request.setAttribute("choice1", choice1);
 				    request.setAttribute("choice2", choice2);
 				    request.setAttribute("choice3", choice3);
+				    request.setAttribute("choice4", choice4);
 				    
 				    request.getRequestDispatcher("/selectQuiz.jsp").forward(request, response);
 			    }else{

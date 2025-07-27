@@ -13,6 +13,6 @@
 	String question_text = (String) request.getAttribute("question_text");
 	String answer = (String) request.getAttribute("answer");
 	%>
-	ok
+
 </body>
 </html>

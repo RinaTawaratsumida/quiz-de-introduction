@@ -5,6 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <link rel="stylesheet" href="style.css">
+<script src="js/countdown_time.js"></script>
 <title>Question</title>
 </head>
 <body>
@@ -29,18 +30,39 @@
 	<p>
 		<b>選択肢:</b>
 	</p>
-	<ul>
+	<form action="QuizServlet" method="get">
+		<p>
+			<button type="submit" name="choice1" id="choice1"><%=choice1%></button>
+		</p>
+		<p>
+			<button type="submit" name="choice2" id="choice2"><%=choice2%></button>
+		</p>
+		<p>
+			<button type="submit" name="choice3" d="choice3"><%=choice3%></button>
+		</p>
+		<p>
+			<button type="submit" name="choice4" id="choice4"><%=choice4%></button>
+		</p>
+		<p>
+			<input type="hidden" name="answer" id="answer" value="<%=answer%>">
+		</p>
+
+	</form>
+
+	<!-- <ul>
 		<li><%=choice1%></li>
 		<li><%=choice2%></li>
 		<li><%=choice3%></li>
 		<li><%=choice4%></li>
-	</ul>
-	<p>
+			<p>
 		<b>正解:</b>
 		<%=answer%></p>
 	<p>
 		<b>解説:</b>
 		<%=explanation%></p>
+	</ul>
+	 -->
+
 
 </body>
 </html>
