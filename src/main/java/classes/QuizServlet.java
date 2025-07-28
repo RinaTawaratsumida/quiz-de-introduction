@@ -83,6 +83,11 @@ public class QuizServlet extends HttpServlet {
 			    String explanation = rs.getString("explanation");
 
 
+			    session.setAttribute("format", format);
+			    session.setAttribute("question_text", question_text);
+			    session.setAttribute("answer", answer);
+			    session.setAttribute("explanation", explanation);
+			    
 			    request.setAttribute("format", format);
 			    request.setAttribute("question_text", question_text);
 			    request.setAttribute("answer", answer);

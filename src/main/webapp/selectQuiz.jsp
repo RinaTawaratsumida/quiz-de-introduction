@@ -44,19 +44,7 @@
 
 	</form>
 
-	<!-- <ul>
-		<li><%=choice1%></li>
-		<li><%=choice2%></li>
-		<li><%=choice3%></li>
-		<li><%=choice4%></li>
-			<p>
-		<b>正解:</b>
-		<%=answer%></p>
-	<p>
-		<b>解説:</b>
-		<%=explanation%></p>
-	</ul>
-	 -->
+
 
 
 </body>
