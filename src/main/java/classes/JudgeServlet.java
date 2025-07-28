@@ -30,11 +30,10 @@ public class JudgeServlet extends HttpServlet {
         }
 
         // 比較（空白や大文字小文字の差を無視するなら trim & equalsIgnoreCase）
-        if (selectedChoice.trim().equals(correctAnswer.trim())) {
-            // 正解ページへ
+        if (selectedChoice != null && correctAnswer != null &&
+            selectedChoice.trim().equals(correctAnswer.trim())) {
             request.getRequestDispatcher("/correct.jsp").forward(request, response);
-        } else {
-            // 不正解ページへ
+        }else{
             request.getRequestDispatcher("/wrong.jsp").forward(request, response);
         }
     }
