@@ -15,10 +15,10 @@
 	String question_text = (String) request.getAttribute("question_text");
 	String answer = (String) request.getAttribute("answer");
 	String explanation = (String) request.getAttribute("explanation");
-	String choice1 = (String) request.getAttribute("choice1");
-	String choice2 = (String) request.getAttribute("choice2");
-	String choice3 = (String) request.getAttribute("choice3");
-	String choice4 = (String) request.getAttribute("choice4"); // 必要なら追加
+	String choice = (String) request.getAttribute("choice1");
+	String choice = (String) request.getAttribute("choice2");
+	String choice = (String) request.getAttribute("choice3");
+	String choice = (String) request.getAttribute("choice4"); // 必要なら追加
 	%>
 
 	<h2>
@@ -32,16 +32,16 @@
 	</p>
 	<form action="QuizServlet" method="get">
 		<p>
-			<button type="submit" name="choice1" id="choice1"><%=choice1%></button>
+			<button type="submit" name="choice" id="choice" value = <%=choice1%>><%=choice1%></button>
 		</p>
 		<p>
-			<button type="submit" name="choice2" id="choice2"><%=choice2%></button>
+			<button type="submit" name="choice" id="choice" value = <%=choice2%>><%=choice2%></button>
 		</p>
 		<p>
-			<button type="submit" name="choice3" d="choice3"><%=choice3%></button>
+			<button type="submit" name="choice" id="choice" value = <%=choice3%>><%=choice3%></button>
 		</p>
 		<p>
-			<button type="submit" name="choice4" id="choice4"><%=choice4%></button>
+			<button type="submit" name="choice" id="choice" value = <%=choice4%>><%=choice4%></button>
 		</p>
 		<p>
 			<input type="hidden" name="answer" id="answer" value="<%=answer%>">
