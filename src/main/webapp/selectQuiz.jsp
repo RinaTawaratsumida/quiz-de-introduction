@@ -43,9 +43,6 @@
 		<p>
 			<button type="submit" name="choice" id="choice4" value = 4><%=choice4%></button>
 		</p>
-		<p>
-			<input type="hidden" name="answer" id="answer" value="<%=answer%>">
-		</p>
 
 	</form>
 
