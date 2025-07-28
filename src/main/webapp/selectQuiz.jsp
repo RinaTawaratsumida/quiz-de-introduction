@@ -15,10 +15,10 @@
 	String question_text = (String) request.getAttribute("question_text");
 	String answer = (String) request.getAttribute("answer");
 	String explanation = (String) request.getAttribute("explanation");
-	String choice = (String) request.getAttribute("choice1");
-	String choice = (String) request.getAttribute("choice2");
-	String choice = (String) request.getAttribute("choice3");
-	String choice = (String) request.getAttribute("choice4"); // 必要なら追加
+	String choice1 = (String) request.getAttribute("choice1");
+	String choice2 = (String) request.getAttribute("choice2");
+	String choice3 = (String) request.getAttribute("choice3");
+	String choice4 = (String) request.getAttribute("choice4");
 	%>
 
 	<h2>
