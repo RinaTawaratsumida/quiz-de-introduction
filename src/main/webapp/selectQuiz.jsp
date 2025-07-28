@@ -13,8 +13,6 @@
 	<%
 	int format = (int) request.getAttribute("format");
 	String question_text = (String) request.getAttribute("question_text");
-	String answer = (String) request.getAttribute("answer");
-	String explanation = (String) request.getAttribute("explanation");
 	String choice1 = (String) request.getAttribute("choice1");
 	String choice2 = (String) request.getAttribute("choice2");
 	String choice3 = (String) request.getAttribute("choice3");
