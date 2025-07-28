@@ -46,7 +46,7 @@ public class JudgeServlet extends HttpServlet {
 		} else {
 			incorrectCount++;
 		}
-
+ 
 		// セッションに保存し直す
 		session.setAttribute("quizCount", quizCount);
 		session.setAttribute("correctCount", correctCount);
