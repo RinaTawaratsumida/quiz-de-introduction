@@ -41,7 +41,7 @@ public class JudgeServlet extends HttpServlet {
         if (questionCount >= MAX_QUESTIONS) {
             response.sendRedirect("result.jsp");
             return;
-        }
+        } 
 
         // 正誤に応じた画面遷移
         String nextPage = isCorrect ? "correct.jsp" : "wrong.jsp";
