@@ -17,14 +17,15 @@ public class JudgeServlet extends HttpServlet {
 
         // セッションまたは選択が無効な場合
         String selectedChoice = request.getParameter("choice");
+        //sessionのanswerがあれば代入、なければnull
         String correctAnswer = (session != null) ? (String) session.getAttribute("answer") : null;
-
+        //各sessionがnullならエラー
         if (session == null || selectedChoice == null || correctAnswer == null) {
             response.sendRedirect("error.jsp");
             return;
         }
 
-        // 正誤判定（trimで余分な空白を除去）
+        // 正誤判定（trimで余分な空白を除去） Booleanで選択した内容と答えが同じなら正にする
         boolean isCorrect = selectedChoice.trim().equals(correctAnswer.trim());
 
         // 正解数の更新
