@@ -30,7 +30,7 @@
 	<p>
 		<b>選択肢:</b>
 	</p>
-	<form action="QuizServlet" method="get">
+	<form action="Judge" method="get">
 		<p>
 			<button type="submit" name="choice" id="choice" value = <%=choice1%>><%=choice1%></button>
 		</p>
