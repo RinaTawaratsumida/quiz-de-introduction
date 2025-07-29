@@ -15,7 +15,7 @@
     String answer = (String) request.getAttribute("answer");
 %>
 
-<form action="JudgeServlet" method="post">
+<form action="JudgeServlet" method="get">
     <input type="text" name="answer">
     <input type="submit" value="送信">
 </form>
