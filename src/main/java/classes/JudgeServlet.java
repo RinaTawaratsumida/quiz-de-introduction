@@ -58,11 +58,14 @@ public class JudgeServlet extends HttpServlet {
 
 		if (quizCount == maxQuiz) {
 			// 最終問題到達時の処理（例: 結果画面へリダイレクト）
-			System.out.println("結果");
+			//System.out.println("結果");
+			request.getRequestDispatcher("/result.jsp").forward(request, response);
 		}else if(selectedChoice.equals(answer)){
-			System.out.println("正解");
+			//System.out.println("正解");
+			request.getRequestDispatcher("/correct.jsp").forward(request, response);
 		}else{
-			System.out.println("はずれ");
+			//System.out.println("はずれ");
+			request.getRequestDispatcher("/incorrect.jsp").forward(request, response);
 		}
 			
 
