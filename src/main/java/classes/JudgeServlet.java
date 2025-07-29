@@ -63,7 +63,8 @@ public class JudgeServlet extends HttpServlet {
 						request.getRequestDispatcher("/LastIncorrect.jsp").forward(request, response);
 					}
 		}else if(answer.equals(Judge_answer)){
-			//System.out.println("正解");
+			System.out.println("正解");
+			//request.getRequestDispatcher("/Correct.jsp").forward(request, response);
 			request.getRequestDispatcher("/Correct.jsp").forward(request, response);
 		}else{
 			//System.out.println("はずれ");
