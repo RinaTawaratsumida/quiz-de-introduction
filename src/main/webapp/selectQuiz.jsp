@@ -41,11 +41,6 @@
 		<p>
 			<button type="submit" name="answer" id="choice4" value = 4><%=choice4%></button>
 		</p>
-
 	</form>
-
-
-
-
 </body>
 </html>
