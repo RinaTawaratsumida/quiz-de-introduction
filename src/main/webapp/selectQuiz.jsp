@@ -30,16 +30,16 @@
 	</p>
 	<form action="JudgeServlet" method="get">
 		<p>
-			<button type="submit" name="choice" id="choice1" value = 1><%=choice1%></button>
+			<button type="submit" name="answer" id="choice1" value = 1><%=choice1%></button>
 		</p>
 		<p>
-			<button type="submit" name="choice" id="choice2" value = 2><%=choice2%></button>
+			<button type="submit" name="answer" id="choice2" value = 2><%=choice2%></button>
 		</p>
 		<p>
-			<button type="submit" name="choice" id="choice3" value = 3><%=choice3%></button>
+			<button type="submit" name="answer" id="choice3" value = 3><%=choice3%></button>
 		</p>
 		<p>
-			<button type="submit" name="choice" id="choice4" value = 4><%=choice4%></button>
+			<button type="submit" name="answer" id="choice4" value = 4><%=choice4%></button>
 		</p>
 
 	</form>
