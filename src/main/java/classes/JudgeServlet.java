@@ -58,16 +58,16 @@ public class JudgeServlet extends HttpServlet {
 
 		if (quizCount == maxQuiz) {
 			if(selectedChoice.equals(answer)){
-						request.getRequestDispatcher("/lastCorrect.jsp").forward(request, response);
+						request.getRequestDispatcher("/LastCorrect.jsp").forward(request, response);
 					}else{
-						request.getRequestDispatcher("/lastIncorrect.jsp").forward(request, response);
+						request.getRequestDispatcher("/LastIncorrect.jsp").forward(request, response);
 					}
 		}else if(selectedChoice.equals(answer)){
 			//System.out.println("正解");
-			request.getRequestDispatcher("/correct.jsp").forward(request, response);
+			request.getRequestDispatcher("/Correct.jsp").forward(request, response);
 		}else{
 			//System.out.println("はずれ");
-			request.getRequestDispatcher("/incorrect.jsp").forward(request, response);
+			request.getRequestDispatcher("/Incorrect.jsp").forward(request, response);
 		}
 	}
 }
