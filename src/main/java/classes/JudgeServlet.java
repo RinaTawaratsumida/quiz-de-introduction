@@ -35,13 +35,13 @@ public class JudgeServlet extends HttpServlet {
 		}
 
 		// パラメータ取得
-		String selectedChoice = request.getParameter("choice");
-		String answer = (String) session.getAttribute("answer").toString();
+		String answer = request.getParameter("answer");
+		String Judge_answer = (String) session.getAttribute("answer").toString();
 
 		// カウント更新
 		quizCount++;
 
-		if (selectedChoice.equals(answer)) {
+		if (answer.equals(Judge_answer)) {
 			correctCount++;
 		} else {
 			incorrectCount++;
@@ -57,12 +57,12 @@ public class JudgeServlet extends HttpServlet {
 		System.out.println("はずれ: " + incorrectCount);
 
 		if (quizCount == maxQuiz) {
-			if(selectedChoice.equals(answer)){
+			if(answer.equals(Judge_answer)){
 						request.getRequestDispatcher("/LastCorrect.jsp").forward(request, response);
 					}else{
 						request.getRequestDispatcher("/LastIncorrect.jsp").forward(request, response);
 					}
-		}else if(selectedChoice.equals(answer)){
+		}else if(answer.equals(Judge_answer)){
 			//System.out.println("正解");
 			request.getRequestDispatcher("/Correct.jsp").forward(request, response);
 		}else{
