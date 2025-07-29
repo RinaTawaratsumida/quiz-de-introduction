@@ -72,6 +72,6 @@ public class JudgeServlet extends HttpServlet {
 		// 正誤に応じた画面遷移（例: 次の問題 or 解説）
 		// String nextPage = isCorrect ? "correct.jsp" : "wrong.jsp";
 		// request.getRequestDispatcher("/" + nextPage).forward(request, response);
-		System.out.println("次の問題へ");
+		//System.out.println("次の問題へ");
 	}
 }
