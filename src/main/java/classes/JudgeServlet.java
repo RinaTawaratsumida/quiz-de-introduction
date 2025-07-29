@@ -57,9 +57,11 @@ public class JudgeServlet extends HttpServlet {
 		System.out.println("はずれ: " + incorrectCount);
 
 		if (quizCount == maxQuiz) {
-			// 最終問題到達時の処理（例: 結果画面へリダイレクト）
-			//System.out.println("結果");
-			request.getRequestDispatcher("/result.jsp").forward(request, response);
+			if(selectedChoice.equals(answer)){
+						request.getRequestDispatcher("/lastCorrect.jsp").forward(request, response);
+					}else{
+						request.getRequestDispatcher("/lastIncorrect.jsp").forward(request, response);
+					}
 		}else if(selectedChoice.equals(answer)){
 			//System.out.println("正解");
 			request.getRequestDispatcher("/correct.jsp").forward(request, response);
@@ -67,11 +69,5 @@ public class JudgeServlet extends HttpServlet {
 			//System.out.println("はずれ");
 			request.getRequestDispatcher("/incorrect.jsp").forward(request, response);
 		}
-			
-
-		// 正誤に応じた画面遷移（例: 次の問題 or 解説）
-		// String nextPage = isCorrect ? "correct.jsp" : "wrong.jsp";
-		// request.getRequestDispatcher("/" + nextPage).forward(request, response);
-		//System.out.println("次の問題へ");
 	}
 }
