@@ -71,7 +71,7 @@ public class QuizServlet extends HttpServlet {
 			int num = rand.nextInt(sum) + 1;
 			
 			stmt.setInt(1, num); // ← SQL文の１つ目の？に代入する内容を指定
-			System.out.println(num);
+			//System.out.println(num);
 			
 			//実際のsqlを検索するための実行分を作成し、numの内容を参照して実行
 			rs = stmt.executeQuery(); // SQLを実行
