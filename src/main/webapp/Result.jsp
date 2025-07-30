@@ -8,10 +8,17 @@
 </head>
 <body>
 <%>
-	Integer correct = (Integer)session.getAttribute("Correct");
+	Integer correctCount = (Integer)session.getAttribute("correctCount");
+	Integer incorrectCount = (Integer)session.getAttribute("incorrectCount");
+	Integer quizCount = (Integer)session.getAttribute("quizCount");
+  double accuracy = 0;
+  if (quizCount > 0) {
+      accuracy = ((double) correctCount / quizCount) * 100;
+  }
 <%>
+
 <p>お疲れ様でした</p>
-
-
+<p>正解数:<%=correctCount%><p>
+<p>正答率: <%= String.format("%.1f", accuracy) %>%</p>>
 </body>
 </html>
