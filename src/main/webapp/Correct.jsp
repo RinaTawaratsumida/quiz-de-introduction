@@ -4,9 +4,12 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>正解画面</title>
 </head>
 <body>
+	<%
+		String explanation = request.getAttribute("choice1");
+	%>
 correct
 </body>
 </html>
