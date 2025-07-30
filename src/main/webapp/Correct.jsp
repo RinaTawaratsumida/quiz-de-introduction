@@ -14,7 +14,7 @@
 	<p><%=explanation%></p>
 	<form action="QuizServlet" method="get">
 		<p>
-			<button type="submit" name="select" id="choice1" value = 1><%=choice1%></button>
+			<input type ="submit" value="start" id="startBtn">
 		</p>
 	</form>
 </body>
