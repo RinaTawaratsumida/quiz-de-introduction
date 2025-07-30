@@ -7,9 +7,15 @@
 <title>正解画面</title>
 </head>
 <body>
+<div>正解</div>
 	<%
 		String explanation = request.getAttribute("explanation");
 	%>
-<p><%>explanation<%></p>
+	<p><%=explanation%></p>
+	<form action="QuizServlet" method="get">
+		<p>
+			<button type="submit" name="select" id="choice1" value = 1><%=choice1%></button>
+		</p>
+	</form>
 </body>
 </html>
