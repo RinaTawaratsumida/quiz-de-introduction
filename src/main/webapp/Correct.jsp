@@ -9,7 +9,7 @@
 <body>
 <div>正解</div>
 	<%
-		String explanation = request.getAttribute("explanation");
+		String explanation = (String) request.getAttribute("explanation");
 	%>
 	<p><%=explanation%></p>
 	<form action="QuizServlet" method="get">
