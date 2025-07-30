@@ -8,8 +8,8 @@
 </head>
 <body>
 	<%
-		String explanation = request.getAttribute("choice1");
+		String explanation = request.getAttribute("explanation");
 	%>
-correct
+<p><%>explanation<%></p>
 </body>
 </html>
