@@ -4,6 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<link rel="stylesheet" href="style.css">
 <title>正解画面</title>
 </head>
 <body>
