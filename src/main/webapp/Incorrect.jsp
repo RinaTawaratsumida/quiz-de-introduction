@@ -11,7 +11,7 @@
 <div>不正解</div>
 	<form action="QuizServlet" method="get">
 		<p>
-			<input type ="submit" value="start" id="startBtn">
+			<input type ="submit" value="next" id="nextBtn">
 		</p>
 	</form>
 </body>

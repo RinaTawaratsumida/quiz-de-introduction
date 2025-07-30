@@ -17,7 +17,7 @@ public class JudgeServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		HttpSession session = request.getSession(true); // true = なければ新規作成
+		HttpSession session = request.getSession(false); // true = なければ新規作成
 
 		// セッションからカウントを取得、なければ 0 に初期化
 		Integer quizCount = (Integer) session.getAttribute("quizCount");
