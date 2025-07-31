@@ -36,7 +36,7 @@ public class QuizServlet extends HttpServlet {
         // PostgreSQL 接続情報
         String dbUrl = "jdbc:postgresql://localhost:5432/quizdb";
         String dbUserName = "postgres";
-        String dbPassword = "password";
+        String dbPassword = "carmen57";
 
         Connection conn = null;
         PreparedStatement stmt = null;
@@ -50,7 +50,7 @@ public class QuizServlet extends HttpServlet {
             String sql_quiz = "SELECT * FROM quiz WHERE quizid = ?";
             stmt = conn.prepareStatement(sql_quiz);
 
-            int sum = 3; // 問題数（固定なら後でDB件数取得に変えるとよい）
+            int sum = 8; // 問題数（固定なら後でDB件数取得に変えるとよい）
             int num = new Random().nextInt(sum) + 1;
             stmt.setInt(1, num);
 
