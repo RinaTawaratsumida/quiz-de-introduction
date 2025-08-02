@@ -1,1 +1,147 @@
+/* ======================================= */
+/* 共通スタイル（text.jsp / select.jsp 両方に適用） */
+/* ======================================= */
+
 @charset "UTF-8";
+
+body {
+  background: #f8fafc;
+  color: #333;
+  font-family: "Segoe UI", "Hiragino Sans", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.quiz-container {
+  max-width: 400px;
+  margin: 50px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
+  padding: 2em;
+}
+
+.quiz-title {
+  font-size: 1.7em;
+  margin-bottom: 0.5em;
+  text-align: center;
+  font-weight: bold;
+}
+
+.quiz-question {
+  font-size: 1.2em;
+  margin-bottom: 1.4em;
+  text-align: center;
+}
+
+/* ---------------- */
+/* テキスト回答用フォーム */
+/* ---------------- */
+
+.quiz-answer-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 1.5em;
+}
+
+.quiz-answer-input {
+  width: 100%;
+  max-width: 260px;
+  padding: 0.8em;
+  font-size: 1em;
+  border: 1.5px solid #bdd0ef;
+  border-radius: 8px;
+  background: #f4f8ff;
+  margin-bottom: 1em;
+  transition: border 0.2s;
+}
+
+.quiz-answer-input:focus {
+  border: 1.5px solid #4682eb;
+  outline: none;
+  background: #eaf1fb;
+}
+
+.quiz-submit {
+  width: 100%;
+  max-width: 180px;
+  padding: 0.9em;
+  background: #5aba47;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1em;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.quiz-submit:hover {
+  background: #428d38;
+}
+
+/* ---------------- */
+/* 選択肢用フォーム（共通部分） */
+/* ※ 2×2のグリッドレイアウトに変更 */
+/* ---------------- */
+
+.quiz-answer-form.choice-buttons {
+  display: grid;                           /* グリッドレイアウトに変更 */
+  grid-template-columns: repeat(2, 1fr);  /* 2列の均等幅 */
+  grid-template-rows: repeat(2, auto);    /* 2行 */
+  gap: 15px 20px;                         /* 行・列の間隔（縦 横） */
+  justify-content: center;                 /* コンテナを中央寄せ */
+  margin-bottom: 1.5em;
+}
+
+.quiz-answer-form.choice-buttons button {
+  padding: 0.8em 1.2em;
+  font-size: 1em;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  min-width: 120px;
+  border: 1.5px solid transparent;
+  background-color: transparent;
+  color: inherit;
+  user-select: none;
+  /* ボタンの高さをそろえたい場合は height を指定しても良い */
+}
+
+/* ======================================= */
+/* select.jsp専用スタイル
+   (bodyにclass="select-page"が付けられている前提) */
+/* ======================================= */
+
+body.select-page {
+  background-color: #f0f4ff; /* select.jsp用の背景色 */
+}
+
+/* 選択肢ボタンに鮮やかなデザインを付与 */
+body.select-page .quiz-answer-form.choice-buttons button {
+  border: 2px solid #4682eb;
+  background-color: #e0ebff;
+  color: #1a3a8a;
+  font-weight: 600;
+}
+
+body.select-page .quiz-answer-form.choice-buttons button:hover {
+  background-color: #a3bff7;
+  color: #fff;
+  border-color: #3561c7;
+}
+
+/* 選択済み状態の強調（任意でjsから selected クラスを付与） */
+body.select-page .quiz-answer-form.choice-buttons button.selected {
+  background-color: #3561c7;
+  color: #fff;
+  border-color: #2a4d9f;
+}
+
+/* フォーカス時の視認性UP */
+body.select-page .quiz-answer-form.choice-buttons button:focus {
+  outline: none;
+  box-shadow: 0 0 3px 2px rgba(70,130,235,0.7);
+}
+
+/* ここに select.jspで必要な追加の強調スタイルを記述可 */
