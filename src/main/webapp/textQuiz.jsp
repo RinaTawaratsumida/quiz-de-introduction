@@ -10,11 +10,11 @@
 <body>
 
 <%
-    Integer format = (Integer) request.getAttribute("format");
+
     String question_text = (String) request.getAttribute("question_text");
     String answer = (String) request.getAttribute("answer");
 %>
-
+<p><%=question_text%></p>
 <form action="JudgeServlet" method="get">
     <input type="text" name="answer">
     <input type="submit" value="送信">
