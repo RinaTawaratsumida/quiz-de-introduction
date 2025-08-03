@@ -11,16 +11,16 @@
 	<!-- ボタンの作成　選択ボタンで出題する問題を選別する-->
 	<div id=start>
 		<form action="QuizServlet" method="get">
-			<input type="submit" name ="name" value="yasuda" id="startBtn">
+			<input type="submit" name="name" value="yasuda" id="startBtn">
 		</form>
 		<form action="QuizServlet" method="get">
-			<input type="submit" name ="name" value="tsumi" id="startBtn">
+			<input type="submit" name="name" value="tsumi" id="startBtn">
 		</form>
 		<form action="QuizServlet" method="get">
-			<input type="submit" name ="name" value="okuyama" id="startBtn">
+			<input type="submit" name="name" value="okuyama" id="startBtn">
 		</form>
 		<form action="QuizServlet" method="get">
-			<input type="submit" name ="name" value="shibukawa" id="startBtn">
+			<input type="submit" name="name" value="shibukawa" id="startBtn">
 		</form>
 	</div>
 </body>

@@ -13,14 +13,15 @@
 	Integer quizCount = (Integer) session.getAttribute("quizCount");
 	%>
 	<div class="quiz-container">
-		<h2>
-			問題数:
-			<%=quizCount + 1%>
-		</h2>
-		<div class="quiz-title">記述式クイズ</div>
-		<p class="quiz-question">
+		<!-- 問題文 -->
+		<div class="quiz-counter">
+			<%=quizCount + 1%>問目
+		</div>
+		<!-- 問題文 -->
+		<div class="quiz-question">
 			<%=question_text%>
-		</p>
+		</div>
+		<!-- テキスト解答フォーム -->
 		<form class="quiz-answer-form" action="JudgeServlet" method="get">
 			<input class="quiz-answer-input" type="text" name="answer"> <input
 				class="quiz-submit" type="submit" value="送信">
