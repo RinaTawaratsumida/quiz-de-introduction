@@ -53,7 +53,7 @@ public class QuizServlet extends HttpServlet {
 			stmt = conn.prepareStatement(quizCount);
 
 			//quizidをランダムで選択
-			int sum = 3; // 1人あたりの総問題数（問題数が変わるごとに変更必要）
+			int sum = 9; // 1人あたりの総問題数（問題数が変わるごとに変更必要）
 			int num = new Random().nextInt(sum) + 1;//（1～（sum+1）の中から１つを選択）
 
 			//start.jspで選択したnameをsessionに保存
