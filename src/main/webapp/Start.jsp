@@ -17,7 +17,7 @@
 			<input type="submit" name="name" value="tsumi" id="startBtn">
 		</form>
 		<form action="QuizServlet" method="get">
-			<input type="submit" name="name" value="okuyama" id="startBtn">
+			<input type="submit" name="name" value="okuya" id="startBtn">
 		</form>
 		<form action="QuizServlet" method="get">
 			<input type="submit" name="name" value="shibukawa" id="startBtn">

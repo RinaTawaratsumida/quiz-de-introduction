@@ -7,17 +7,23 @@
 <link rel="stylesheet" href="style.css">
 <title>正解画面</title>
 </head>
-<body>
-	<div>正解</div>
-	<%
-	String explanation = (String) session.getAttribute("explanation");
-	%>
+<body class="result-page">
+	<div class="container">
+		<h1 class="result-title">正解！</h1>
 
-	<p><%=explanation%></p>
-	<form action="QuizServlet" method="get">
-		<p>
-			<input type="submit" value="next" id="nextBtn">
-		</p>
-	</form>
+		<%
+		String answer = (String) session.getAttribute("answer");
+		String explanation = (String) session.getAttribute("explanation");
+		%>
+		<!-- 解説 -->
+		<div class="result-explanation">
+			<%=explanation%>
+		</div>
+
+		<!-- 次へボタン -->
+		<form action="QuizServlet" method="get">
+			<button type="submit" class="next-btn">次の問題へ</button>
+		</form>
+	</div>
 </body>
 </html>
