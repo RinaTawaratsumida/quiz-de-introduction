@@ -7,20 +7,24 @@
 <link rel="stylesheet" href="style.css">
 <title>クイズ開始</title>
 </head>
-<body>
-	<!-- ボタンの作成　選択ボタンで出題する問題を選別する-->
-	<div id=start>
+<body class="start-page">
+	<!-- 画面中央コンテナ -->
+	<div id="start">
+	    <!-- タイトル追加 -->
+	    <h1 class="start-title">だれのクイズを始めますか？</h1>
+	    
+	    <!-- ボタン群 -->
 		<form action="QuizServlet" method="get">
-			<input type="submit" name="name" value="yasuda" id="startBtn">
+			<input type="submit" name="name" value="yasuda" class="startBtn">
 		</form>
 		<form action="QuizServlet" method="get">
-			<input type="submit" name="name" value="tsumi" id="startBtn">
+			<input type="submit" name="name" value="tsumi" class="startBtn">
 		</form>
 		<form action="QuizServlet" method="get">
-			<input type="submit" name="name" value="okuya" id="startBtn">
+			<input type="submit" name="name" value="okuyama" class="startBtn">
 		</form>
 		<form action="QuizServlet" method="get">
-			<input type="submit" name="name" value="shibukawa" id="startBtn">
+			<input type="submit" name="name" value="shibukawa" class="startBtn">
 		</form>
 	</div>
 </body>

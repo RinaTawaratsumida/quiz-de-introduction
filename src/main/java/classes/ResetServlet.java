@@ -12,14 +12,14 @@ import javax.servlet.http.HttpSession;
 /**
  * Servlet implementation class RisetServlet
  */
-@WebServlet("/RisetServlet")
-public class RisetServlet extends HttpServlet {
+@WebServlet("/ResetServlet")
+public class ResetServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	/**
 	 * @see HttpServlet#HttpServlet()
 	 */
-	public RisetServlet() {
+	public ResetServlet() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
