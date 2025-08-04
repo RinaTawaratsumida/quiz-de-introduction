@@ -1,5 +1,5 @@
 /* ======================================= */
-/* 共通スタイル（text.jsp / select.jsp / start.jsp 共通） */
+/* 共通スタイル（全ページ共通） */
 /* ======================================= */
 @charset "UTF-8";
 
@@ -10,6 +10,10 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* ======================================= */
+/* クイズページ共通スタイル（text.jsp / select.jsp） */
+/* ======================================= */
 
 .quiz-container {
   max-width: 400px;
@@ -27,10 +31,7 @@ body {
   font-weight: bold;
 }
 
-/* ======================================= */
-/* 問題文と問題数の共通スタイル */
-/* ======================================= */
-
+/* 問題数や問題文共通 */
 .quiz-header-text {
   font-size: 1.2em;
   text-align: center;
@@ -55,9 +56,9 @@ body {
   color: #333;
 }
 
-/* ---------------- */
-/* テキスト回答用フォーム */
-/* ---------------- */
+/* ======================================= */
+/* テキスト回答フォーム */
+/* ======================================= */
 
 .quiz-answer-form {
   display: flex;
@@ -101,10 +102,9 @@ body {
   background: #428d38;
 }
 
-/* ---------------- */
-/* 選択肢用フォーム（共通部分） */
-/* 2×2グリッドレイアウト */
-/* ---------------- */
+/* ======================================= */
+/* 選択肢用フォーム（select.jsp） */
+/* ======================================= */
 
 .quiz-answer-form.choice-buttons {
   display: grid;
@@ -129,14 +129,12 @@ body {
   user-select: none;
 }
 
-/* ======================================= */
-/* select.jsp 専用スタイル */
-/* ======================================= */
-
+/* select.jsp 専用背景色 */
 body.select-page {
   background-color: #f0f4ff;
 }
 
+/* 選択肢ボタンデザイン */
 body.select-page .quiz-answer-form.choice-buttons button {
   width: 210px;
   height: 100px;
@@ -213,6 +211,69 @@ body.start-page {
 }
 
 #startBtn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* ======================================= */
+/* result.jsp 専用スタイル */
+/* ======================================= */
+
+body.result-page {
+  background: linear-gradient(135deg, #f8fafc, #e0ebff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Segoe UI", "Hiragino Sans", Arial, sans-serif;
+}
+
+.result-container {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  padding: 2.5em 3em;
+  text-align: center;
+  max-width: 400px;
+  width: 90%;
+}
+
+.result-container p {
+  margin: 0.8em 0;
+  font-size: 1.2em;
+  color: #333;
+  font-weight: 500;
+}
+
+/* 「お疲れ様でした」のみ強調 */
+.result-container p:first-child {
+  font-size: 1.5em;
+  font-weight: 700;
+  margin-bottom: 1em;
+}
+
+/* resetボタンをスタートボタン風に */
+.result-container #startBtn {
+  width: 200px;
+  height: 60px;
+  font-size: 1.2em;
+  font-weight: 600;
+  color: #fff;
+  background-color: #4682eb;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 1.5em;
+  transition: 0.25s;
+}
+
+.result-container #startBtn:hover {
+  background-color: #3561c7;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.result-container #startBtn:active {
   transform: translateY(0);
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
