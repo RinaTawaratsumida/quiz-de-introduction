@@ -7,7 +7,7 @@
 <link rel="stylesheet" href="style.css">
 <title>クイズ開始</title>
 </head>
-<body>
+<body class = "start-page">
 	<!-- ボタンの作成　選択ボタンで出題する問題を選別する-->
 	<div id=start>
 		<form action="QuizServlet" method="get">
