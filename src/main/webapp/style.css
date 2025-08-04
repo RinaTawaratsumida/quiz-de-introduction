@@ -1,171 +1,186 @@
 /* ======================================= */
 /* 共通スタイル（全ページ共通） */
 /* ======================================= */
-@charset "UTF-8";
+@charset "UTF-8"; /* CSSファイルの文字コードをUTF-8で指定 */
 
+/* body共通設定 */
 body {
-  background: #f8fafc;
-  color: #333;
-  font-family: "Segoe UI", "Hiragino Sans", Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+  background: #f8fafc; /* ページ全体の背景色（薄いグレー青系） */
+  color: #333; /* 文字色（濃いグレー） */
+  font-family: "Segoe UI", "Hiragino Sans", Arial, sans-serif; /* フォント指定 */
+  margin: 0; /* ページの外余白をゼロ */
+  padding: 0; /* ページの内余白をゼロ */
 }
 
 /* ======================================= */
 /* クイズページ共通スタイル（text.jsp / select.jsp） */
 /* ======================================= */
 
+/* クイズ全体を囲むボックス */
 .quiz-container {
-  max-width: 400px;
-  margin: 50px auto;
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10);
-  padding: 2em;
+  max-width: 400px; /* 幅の最大値を400pxに制限 */
+  margin: 50px auto; /* 上下50px、左右中央寄せ */
+  background: #fff; /* 背景白 */
+  border-radius: 16px; /* 角を16px丸める */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10); /* 薄い影を付ける */
+  padding: 2em; /* 内側余白を2em */
 }
 
+/* クイズタイトル */
 .quiz-title {
-  font-size: 1.7em;
-  margin-bottom: 0.5em;
-  text-align: center;
-  font-weight: bold;
+  font-size: 1.7em; /* 大きめ文字 */
+  margin-bottom: 0.5em; /* 下に0.5em余白 */
+  text-align: center; /* 中央寄せ */
+  font-weight: bold; /* 太字 */
 }
 
-/* 問題数や問題文共通 */
+/* 問題数や問題文共通の装飾 */
 .quiz-header-text {
-  font-size: 1.2em;
-  text-align: center;
-  font-weight: 500;
-  margin-bottom: 0.8em;
-  color: #333;
+  font-size: 1.2em; /* 少し大きめ文字 */
+  text-align: center; /* 中央寄せ */
+  font-weight: 500; /* やや太字 */
+  margin-bottom: 0.8em; /* 下に余白 */
+  color: #333; /* 濃いグレー文字 */
 }
 
+/* 問題文 */
 .quiz-question {
-  font-size: 1.5em;
-  font-weight: 600;
-  line-height: 1.6;
-  text-align: center;
-  margin-bottom: 1em;
+  font-size: 1.5em; /* 大きめ文字 */
+  font-weight: 600; /* 太字 */
+  line-height: 1.6; /* 行間広めで読みやすく */
+  text-align: center; /* 中央寄せ */
+  margin-bottom: 1em; /* 下に余白 */
 }
 
+/* 問題カウンター（例: 1/5問目） */
 .quiz-counter {
-  font-size: 1.5em;
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 1em;
-  color: #333;
+  font-size: 1.5em; /* 大きめ文字 */
+  font-weight: 600; /* 太字 */
+  text-align: center; /* 中央寄せ */
+  margin-bottom: 1em; /* 下に余白 */
+  color: #333; /* 濃いグレー */
 }
 
 /* ======================================= */
 /* テキスト回答フォーム */
 /* ======================================= */
 
+/* テキスト入力とボタンを縦並びで中央寄せ */
 .quiz-answer-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 1.5em;
+  display: flex; /* フレックスボックスで配置 */
+  flex-direction: column; /* 縦並び */
+  align-items: center; /* 横中央寄せ */
+  margin-bottom: 1.5em; /* 下に余白 */
 }
 
+/* テキスト回答用の入力欄 */
 .quiz-answer-input {
-  width: 100%;
-  max-width: 260px;
-  padding: 0.8em;
-  font-size: 1em;
-  border: 1.5px solid #bdd0ef;
-  border-radius: 8px;
-  background: #f4f8ff;
-  margin-bottom: 1em;
-  transition: border 0.2s;
+  width: 100%; /* 幅いっぱい */
+  max-width: 260px; /* 最大幅260px */
+  padding: 0.8em; /* 内側余白 */
+  font-size: 1em; /* 標準文字サイズ */
+  border: 1.5px solid #bdd0ef; /* 薄い青枠 */
+  border-radius: 8px; /* 角丸 */
+  background: #f4f8ff; /* 薄い青背景 */
+  margin-bottom: 1em; /* 下に余白 */
+  transition: border 0.2s; /* フォーカス時の枠線変更をアニメーション */
 }
 
+/* 入力欄にフォーカスした時 */
 .quiz-answer-input:focus {
-  border: 1.5px solid #4682eb;
-  outline: none;
-  background: #eaf1fb;
+  border: 1.5px solid #4682eb; /* 濃い青の枠線 */
+  outline: none; /* ブラウザ標準の青いアウトラインを消す */
+  background: #eaf1fb; /* さらに淡い青背景 */
 }
 
+/* 回答送信ボタン */
 .quiz-submit {
-  width: 100%;
-  max-width: 180px;
-  padding: 0.9em;
-  background: #5aba47;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  font-size: 1em;
-  cursor: pointer;
-  transition: background 0.2s;
+  width: 100%; /* 幅いっぱい */
+  max-width: 180px; /* 最大幅180px */
+  padding: 0.9em; /* 内側余白 */
+  background: #5aba47; /* 緑背景 */
+  color: #fff; /* 白文字 */
+  border: none; /* 枠線なし */
+  border-radius: 8px; /* 角丸 */
+  font-size: 1em; /* 標準文字サイズ */
+  cursor: pointer; /* カーソルを指に */
+  transition: background 0.2s; /* ホバー時の色変化をスムーズに */
 }
 
+/* 回答ボタンにマウスを乗せた時 */
 .quiz-submit:hover {
-  background: #428d38;
+  background: #428d38; /* 少し濃い緑に */
 }
 
 /* ======================================= */
 /* 選択肢用フォーム（select.jsp） */
 /* ======================================= */
 
+/* 4択ボタンを2×2のグリッドで配置 */
 .quiz-answer-form.choice-buttons {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, auto);
-  gap: 15px 20px;
-  justify-content: center;
-  margin-bottom: 1.5em;
-  place-items: center;
+  display: grid; /* グリッドレイアウト */
+  grid-template-columns: repeat(2, 1fr); /* 2列均等幅 */
+  grid-template-rows: repeat(2, auto); /* 2行 */
+  gap: 15px 20px; /* 行間15px、列間20px */
+  justify-content: center; /* 横方向中央寄せ */
+  margin-bottom: 1.5em; /* 下に余白 */
+  place-items: center; /* 各セル内も中央寄せ */
 }
 
+/* 選択肢のボタン基本デザイン */
 .quiz-answer-form.choice-buttons button {
-  padding: 0.8em 1.2em;
-  font-size: 1em;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  min-width: 120px;
-  border: 1.5px solid transparent;
-  background-color: transparent;
-  color: inherit;
-  user-select: none;
+  padding: 0.8em 1.2em; /* 内側余白 */
+  font-size: 1em; /* 標準文字サイズ */
+  border-radius: 8px; /* 角丸 */
+  cursor: pointer; /* 指カーソル */
+  transition: background-color 0.3s ease; /* ホバー時の色変化をスムーズに */
+  min-width: 120px; /* 最低幅を確保 */
+  border: 1.5px solid transparent; /* 枠線は透明で確保 */
+  background-color: transparent; /* 初期は透明背景 */
+  color: inherit; /* 親の文字色を継承 */
+  user-select: none; /* テキスト選択不可 */
 }
 
-/* select.jsp 専用背景色 */
+/* select.jsp 専用の背景色 */
 body.select-page {
-  background-color: #f0f4ff;
+  background-color: #f0f4ff; /* 薄い水色背景 */
 }
 
-/* 選択肢ボタンデザイン */
+/* 選択肢ボタンの本番デザイン */
 body.select-page .quiz-answer-form.choice-buttons button {
-  width: 210px;
-  height: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  border: 2px solid #4682eb;
-  background-color: #e0ebff;
-  color: #1a3a8a;
-  font-weight: 600;
-  line-height: 1.4;
-  padding: 0.5em;
+  width: 210px; /* 幅210px固定 */
+  height: 100px; /* 高さ100px固定 */
+  display: flex; /* ボタン内もフレックスで中央寄せ */
+  flex-direction: column; /* 縦方向配置 */
+  align-items: center; /* 横中央 */
+  justify-content: center; /* 縦中央 */
+  text-align: center; /* テキスト中央寄せ */
+  border: 2px solid #4682eb; /* 青い枠線 */
+  background-color: #e0ebff; /* 薄い青背景 */
+  color: #1a3a8a; /* 濃い青文字 */
+  font-weight: 600; /* 太字 */
+  line-height: 1.4; /* 行間少し広め */
+  padding: 0.5em; /* 内側余白 */
 }
 
+/* マウスホバー時の選択肢ボタン */
 body.select-page .quiz-answer-form.choice-buttons button:hover {
-  background-color: #a3bff7;
-  color: #fff;
-  border-color: #3561c7;
+  background-color: #a3bff7; /* 少し濃い青 */
+  color: #fff; /* 文字は白 */
+  border-color: #3561c7; /* 枠線も濃い青に */
 }
 
+/* 選択済みボタンを強調（JSで.selectedを付与） */
 body.select-page .quiz-answer-form.choice-buttons button.selected {
-  background-color: #3561c7;
-  color: #fff;
-  border-color: #2a4d9f;
+  background-color: #3561c7; /* 濃い青背景 */
+  color: #fff; /* 白文字 */
+  border-color: #2a4d9f; /* 濃い青枠線 */
 }
 
+/* フォーカス時の視認性向上 */
 body.select-page .quiz-answer-form.choice-buttons button:focus {
-  outline: none;
-  box-shadow: 0 0 3px 2px rgba(70,130,235,0.7);
+  outline: none; /* 標準アウトライン消去 */
+  box-shadow: 0 0 3px 2px rgba(70,130,235,0.7); /* 青い光を付与 */
 }
 
 /* ======================================= */
@@ -173,46 +188,51 @@ body.select-page .quiz-answer-form.choice-buttons button:focus {
 /* ======================================= */
 
 body.start-page {
-  background: linear-gradient(135deg, #f8fafc, #e0ebff);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  background: linear-gradient(135deg, #f8fafc, #e0ebff); /* 斜めグラデ背景 */
+  display: flex; /* 中央寄せのためフレックス */
+  justify-content: center; /* 横中央寄せ */
+  align-items: center; /* 縦中央寄せ */
+  height: 100vh; /* 画面全体高さ */
 }
 
+/* スタートボタン群のコンテナ */
 #start {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+  display: flex; /* フレックスレイアウト */
+  flex-direction: column; /* 縦並び */
+  gap: 20px; /* ボタン間20px */
 }
 
+/* 各フォームを中央寄せ */
 #start form {
   display: flex;
   justify-content: center;
 }
 
+/* スタートボタン */
 #startBtn {
   width: 220px;
   height: 70px;
-  font-size: 1.3em;
-  font-weight: 600;
-  color: #fff;
-  background-color: #4682eb;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: 0.25s;
+  font-size: 1.3em; /* 大きめ文字 */
+  font-weight: 600; /* 太字 */
+  color: #fff; /* 白文字 */
+  background-color: #4682eb; /* 青背景 */
+  border: none; /* 枠線なし */
+  border-radius: 12px; /* 角丸 */
+  cursor: pointer; /* 指カーソル */
+  transition: 0.25s; /* ホバー時のアニメーション */
 }
 
+/* ホバー時のスタートボタン */
 #startBtn:hover {
-  background-color: #3561c7;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  background-color: #3561c7; /* 濃い青に */
+  transform: translateY(-2px); /* 浮くような演出 */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* 影を追加 */
 }
 
+/* クリック時のスタートボタン */
 #startBtn:active {
-  transform: translateY(0);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transform: translateY(0); /* 元に戻る */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* 影を弱める */
 }
 
 /* ======================================= */
@@ -220,60 +240,64 @@ body.start-page {
 /* ======================================= */
 
 body.result-page {
-  background: linear-gradient(135deg, #f8fafc, #e0ebff);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  font-family: "Segoe UI", "Hiragino Sans", Arial, sans-serif;
+  background: linear-gradient(135deg, #f8fafc, #e0ebff); /* 斜めグラデ背景 */
+  display: flex; /* 中央寄せ用フレックス */
+  justify-content: center; /* 横中央 */
+  align-items: center; /* 縦中央 */
+  height: 100vh; /* 全画面高さ */
+  font-family: "Segoe UI", "Hiragino Sans", Arial, sans-serif; /* フォント指定 */
 }
 
+/* 結果表示用ボックス */
 .result-container {
-  background: #fff;
-  border-radius: 16px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-  padding: 2.5em 3em;
-  text-align: center;
-  max-width: 400px;
-  width: 90%;
+  background: #fff; /* 白背景 */
+  border-radius: 16px; /* 角丸 */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15); /* 少し強めの影 */
+  padding: 2.5em 3em; /* 内側余白 */
+  text-align: center; /* 中央寄せ */
+  max-width: 400px; /* 最大幅400px */
+  width: 90%; /* スマホでも縮む */
 }
 
+/* 結果の各行 */
 .result-container p {
-  margin: 0.8em 0;
-  font-size: 1.2em;
-  color: #333;
-  font-weight: 500;
+  margin: 0.8em 0; /* 上下に余白 */
+  font-size: 1.2em; /* 少し大きめ文字 */
+  color: #333; /* 濃いグレー */
+  font-weight: 500; /* やや太字 */
 }
 
-/* 「お疲れ様でした」のみ強調 */
+/* 最初の行「お疲れ様でした」だけ強調 */
 .result-container p:first-child {
-  font-size: 1.5em;
-  font-weight: 700;
-  margin-bottom: 1em;
+  font-size: 1.5em; /* さらに大きめ */
+  font-weight: 700; /* 太字強め */
+  margin-bottom: 1em; /* 下に余白 */
 }
 
 /* resetボタンをスタートボタン風に */
 .result-container #startBtn {
-  width: 200px;
-  height: 60px;
-  font-size: 1.2em;
-  font-weight: 600;
-  color: #fff;
-  background-color: #4682eb;
-  border: none;
-  border-radius: 12px;
-  cursor: pointer;
-  margin-top: 1.5em;
-  transition: 0.25s;
+  width: 200px; /* 幅200px */
+  height: 60px; /* 高さ60px */
+  font-size: 1.2em; /* 少し大きめ */
+  font-weight: 600; /* 太字 */
+  color: #fff; /* 白文字 */
+  background-color: #4682eb; /* 青背景 */
+  border: none; /* 枠線なし */
+  border-radius: 12px; /* 角丸 */
+  cursor: pointer; /* 指カーソル */
+  margin-top: 1.5em; /* 上に余白 */
+  transition: 0.25s; /* ホバー時のアニメーション */
 }
 
+/* resetボタンにホバー時 */
 .result-container #startBtn:hover {
-  background-color: #3561c7;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  background-color: #3561c7; /* 濃い青に */
+  transform: translateY(-2px); /* 浮く演出 */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* 影追加 */
 }
 
+/* resetボタン押下時 */
 .result-container #startBtn:active {
-  transform: translateY(0);
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transform: translateY(0); /* 元に戻る */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* 影を弱める */
 }
