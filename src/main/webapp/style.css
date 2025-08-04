@@ -1,7 +1,6 @@
 /* ======================================= */
-/* 共通スタイル（text.jsp / select.jsp 両方に適用） */
+/* 共通スタイル（text.jsp / select.jsp / start.jsp 共通） */
 /* ======================================= */
-
 @charset "UTF-8";
 
 body {
@@ -33,26 +32,24 @@ body {
 /* ======================================= */
 
 .quiz-header-text {
-  font-size: 1.2em;       /* 問題数などの基本サイズ */
-  text-align: center;     
+  font-size: 1.2em;
+  text-align: center;
   font-weight: 500;
   margin-bottom: 0.8em;
   color: #333;
 }
 
-/* 問題文を特に大きく・読みやすくする */
 .quiz-question {
-  font-size: 1.5em;       /* 大きめ文字サイズ */
-  font-weight: 600;       /* 太字で強調 */
-  line-height: 1.6;       /* 行間を広げる */
-  text-align: center;     /* 横中央 */
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: 1.6;
+  text-align: center;
   margin-bottom: 1em;
 }
 
-/* 問題数を大きく太字に */
 .quiz-counter {
-  font-size: 1.5em;       /* 大きい文字サイズ */
-  font-weight: 600;       /* 太字 */
+  font-size: 1.5em;
+  font-weight: 600;
   text-align: center;
   margin-bottom: 1em;
   color: #333;
@@ -111,13 +108,11 @@ body {
 
 .quiz-answer-form.choice-buttons {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2列均等幅 */
-  grid-template-rows: repeat(2, auto);   /* 2行 */
-  gap: 15px 20px;                        /* 行・列の間隔（縦 横） */
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 15px 20px;
   justify-content: center;
   margin-bottom: 1.5em;
-
-  /* 各セルの中身を中央寄せ */
   place-items: center;
 }
 
@@ -139,22 +134,17 @@ body {
 /* ======================================= */
 
 body.select-page {
-  background-color: #f0f4ff; /* select.jsp 用背景色 */
+  background-color: #f0f4ff;
 }
 
-/* 選択肢ボタンの統一サイズ＆中央寄せ */
 body.select-page .quiz-answer-form.choice-buttons button {
   width: 210px;
   height: 100px;
-
-  /* ボタン内の中央寄せ設定 */
   display: flex;
   flex-direction: column;
-  align-items: center;        /* 水平中央寄せ */
-  justify-content: center;    /* 垂直中央寄せ */
+  align-items: center;
+  justify-content: center;
   text-align: center;
-
-  /* デザイン */
   border: 2px solid #4682eb;
   background-color: #e0ebff;
   color: #1a3a8a;
@@ -169,15 +159,60 @@ body.select-page .quiz-answer-form.choice-buttons button:hover {
   border-color: #3561c7;
 }
 
-/* 選択済み状態の強調（任意でjsから selected クラスを付与） */
 body.select-page .quiz-answer-form.choice-buttons button.selected {
   background-color: #3561c7;
   color: #fff;
   border-color: #2a4d9f;
 }
 
-/* フォーカス時の視認性UP */
 body.select-page .quiz-answer-form.choice-buttons button:focus {
   outline: none;
   box-shadow: 0 0 3px 2px rgba(70,130,235,0.7);
+}
+
+/* ======================================= */
+/* start.jsp 専用スタイル */
+/* ======================================= */
+
+body.start-page {
+  background: linear-gradient(135deg, #f8fafc, #e0ebff);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#start {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#start form {
+  display: flex;
+  justify-content: center;
+}
+
+#startBtn {
+  width: 220px;
+  height: 70px;
+  font-size: 1.3em;
+  font-weight: 600;
+  color: #fff;
+  background-color: #4682eb;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+#startBtn:hover {
+  background-color: #3561c7;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+#startBtn:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
