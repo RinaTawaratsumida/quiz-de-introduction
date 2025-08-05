@@ -42,7 +42,7 @@ public class QuizServlet extends HttpServlet {
 		Connection conn = null;
 		PreparedStatement stmt = null;
 		ResultSet rs = null;
-
+ 
 		try {
 			// PostgreSQLに接続するドライバを使用する宣言
 			Class.forName("org.postgresql.Driver");
