@@ -39,8 +39,7 @@ public class JudgeServlet extends HttpServlet {
 		String Judge_answer = (String) session.getAttribute("answer").toString();
 
 		// カウント更新
-		quizCount++;
-
+		quizCount++; 
 		if (answer.equals(Judge_answer)) {
 			correctCount++;
 		} else {
