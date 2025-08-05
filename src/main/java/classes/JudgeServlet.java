@@ -12,7 +12,7 @@ import javax.servlet.http.HttpSession;
 @WebServlet("/JudgeServlet")
 public class JudgeServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	private static final int maxQuiz = 5;
+	private static final int maxQuiz = 3;
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
