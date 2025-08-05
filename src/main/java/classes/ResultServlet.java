@@ -13,9 +13,12 @@ public class ResultServlet extends HttpServlet {
     public ResultServlet() {
         super();
     }
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
+    // GETリクエストを受け取ったときの処理
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) 
+	        throws ServletException, IOException {
+	    
+	    // 最終結果画面（Result.jsp）にページ遷移
         request.getRequestDispatcher("/Result.jsp").forward(request, response);
 	}
-
-
 }

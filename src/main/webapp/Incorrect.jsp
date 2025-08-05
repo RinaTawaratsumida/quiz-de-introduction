@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="style.css">
 <title>不正解画面</title>
 </head>
+<<<<<<< HEAD
 <body class="result-page">
 	<%
 	// セッションに保存された explanation を取得
@@ -28,5 +29,19 @@
 			<button type="submit" class="next-btn">次の問題へ</button>
 		</form>
 	</div>
+=======
+<body>
+
+    <!-- 不正解のメッセージを表示 -->
+    <div>不正解</div>
+
+    <!-- 次の問題に進むボタン -->
+    <form action="QuizServlet" method="get">
+        <p>
+            <input type="submit" value="next" id="nextBtn">
+        </p>
+    </form>
+
+>>>>>>> branch 'feature_yasuda_ver2' of https://github.com/RinaTawaratsumida/quiz-de-introduction.git
 </body>
 </html>

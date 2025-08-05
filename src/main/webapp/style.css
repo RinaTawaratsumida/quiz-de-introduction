@@ -1,21 +1,47 @@
 /* ======================================= */
+<<<<<<< HEAD
 /* 共通スタイル */
+=======
+/* 共通スタイル（全ページ共通） */
+>>>>>>> branch 'feature_yasuda_ver2' of https://github.com/RinaTawaratsumida/quiz-de-introduction.git
 /* ======================================= */
+<<<<<<< HEAD
 @charset "UTF-8"; /* 文字コードをUTF-8に指定 */
 
+=======
+@charset "UTF-8"; /* CSSファイルの文字コードをUTF-8で指定 */
+
+/* body共通設定 */
+>>>>>>> branch 'feature_yasuda_ver2' of https://github.com/RinaTawaratsumida/quiz-de-introduction.git
 body {
+<<<<<<< HEAD
     background: #f8fafc; /* 背景色を薄いグレー青系に設定 */
     color: #333; /* 文字色を濃いグレーに設定 */
     font-family: "Segoe UI", "Hiragino Sans", Arial, sans-serif; /* フォントファミリーの指定 */
     margin: 0; /* ページの外側の余白をリセット */
     padding: 0; /* ページの内側の余白をリセット */
+=======
+  background: #f8fafc; /* ページ全体の背景色（薄いグレー青系） */
+  color: #333; /* 文字色（濃いグレー） */
+  font-family: "Segoe UI", "Hiragino Sans", Arial, sans-serif; /* フォント指定 */
+  margin: 0; /* ページの外余白をゼロ */
+  padding: 0; /* ページの内余白をゼロ */
+>>>>>>> branch 'feature_yasuda_ver2' of https://github.com/RinaTawaratsumida/quiz-de-introduction.git
 }
 
 /* ======================================= */
+<<<<<<< HEAD
 /* クイズページ共通スタイル */
 /* ======================================= */
 
+=======
+/* クイズページ共通スタイル（text.jsp / select.jsp） */
+/* ======================================= */
+
+/* クイズ全体を囲むボックス */
+>>>>>>> branch 'feature_yasuda_ver2' of https://github.com/RinaTawaratsumida/quiz-de-introduction.git
 .quiz-container {
+<<<<<<< HEAD
     max-width: 600px; /* 横幅最大600pxに制限 */
     margin: 50px auto; /* 上下余白50px、左右中央寄せ */
     background: #fff; /* 背景を白に設定 */
@@ -26,52 +52,118 @@ body {
     flex-direction: column; /* 縦方向に要素を並べる */
     align-items: center; /* 横方向に中央揃え */
     justify-content: center; /* 縦方向に中央揃え */
+=======
+  max-width: 400px; /* 幅の最大値を400pxに制限 */
+  margin: 50px auto; /* 上下50px、左右中央寄せ */
+  background: #fff; /* 背景白 */
+  border-radius: 16px; /* 角を16px丸める */
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.10); /* 薄い影を付ける */
+  padding: 2em; /* 内側余白を2em */
+>>>>>>> branch 'feature_yasuda_ver2' of https://github.com/RinaTawaratsumida/quiz-de-introduction.git
 }
 
+/* クイズタイトル */
 .quiz-title {
+<<<<<<< HEAD
     font-size: 1.7em; /* 文字サイズを1.7emに */
     margin-bottom: 0.5em; /* 下に0.5emの余白 */
     text-align: center; /* 文字を中央揃え */
     font-weight: bold; /* 太字に設定 */
+=======
+  font-size: 1.7em; /* 大きめ文字 */
+  margin-bottom: 0.5em; /* 下に0.5em余白 */
+  text-align: center; /* 中央寄せ */
+  font-weight: bold; /* 太字 */
+>>>>>>> branch 'feature_yasuda_ver2' of https://github.com/RinaTawaratsumida/quiz-de-introduction.git
 }
 
+<<<<<<< HEAD
 /* 問題文と問題数 */
+=======
+/* 問題数や問題文共通の装飾 */
+>>>>>>> branch 'feature_yasuda_ver2' of https://github.com/RinaTawaratsumida/quiz-de-introduction.git
 .quiz-header-text {
+<<<<<<< HEAD
     font-size: 1.2em; /* 文字サイズを1.2emに */
     text-align: center; /* 中央揃え */
     font-weight: 500; /* やや太めのフォントウェイト */
     margin-bottom: 0.8em; /* 下に0.8emの余白 */
     color: #333; /* 文字色を濃いグレーに */
+=======
+  font-size: 1.2em; /* 少し大きめ文字 */
+  text-align: center; /* 中央寄せ */
+  font-weight: 500; /* やや太字 */
+  margin-bottom: 0.8em; /* 下に余白 */
+  color: #333; /* 濃いグレー文字 */
+>>>>>>> branch 'feature_yasuda_ver2' of https://github.com/RinaTawaratsumida/quiz-de-introduction.git
 }
 
+<<<<<<< HEAD
+=======
+/* 問題文 */
+>>>>>>> branch 'feature_yasuda_ver2' of https://github.com/RinaTawaratsumida/quiz-de-introduction.git
 .quiz-question {
+<<<<<<< HEAD
     font-size: 1.5em; /* 文字サイズ1.5em */
     font-weight: 600; /* 太字に近いフォントウェイト */
     line-height: 1.6; /* 行間を1.6に設定 */
     text-align: center; /* 中央揃え */
     margin-bottom: 1em; /* 下に1emの余白 */
+=======
+  font-size: 1.5em; /* 大きめ文字 */
+  font-weight: 600; /* 太字 */
+  line-height: 1.6; /* 行間広めで読みやすく */
+  text-align: center; /* 中央寄せ */
+  margin-bottom: 1em; /* 下に余白 */
+>>>>>>> branch 'feature_yasuda_ver2' of https://github.com/RinaTawaratsumida/quiz-de-introduction.git
 }
 
+<<<<<<< HEAD
+=======
+/* 問題カウンター（例: 1/5問目） */
+>>>>>>> branch 'feature_yasuda_ver2' of https://github.com/RinaTawaratsumida/quiz-de-introduction.git
 .quiz-counter {
+<<<<<<< HEAD
     font-size: 1.5em; /* 文字サイズ1.5em */
     font-weight: 600; /* 太字に近い */
     text-align: center; /* 中央揃え */
     margin-bottom: 1em; /* 下に1em余白 */
     color: #333; /* 文字色を濃いグレー */
+=======
+  font-size: 1.5em; /* 大きめ文字 */
+  font-weight: 600; /* 太字 */
+  text-align: center; /* 中央寄せ */
+  margin-bottom: 1em; /* 下に余白 */
+  color: #333; /* 濃いグレー */
+>>>>>>> branch 'feature_yasuda_ver2' of https://github.com/RinaTawaratsumida/quiz-de-introduction.git
 }
 
 /* ======================================= */
+<<<<<<< HEAD
 /* テキスト回答用フォーム */
+=======
+/* テキスト回答フォーム */
+>>>>>>> branch 'feature_yasuda_ver2' of https://github.com/RinaTawaratsumida/quiz-de-introduction.git
 /* ======================================= */
 
+/* テキスト入力とボタンを縦並びで中央寄せ */
 .quiz-answer-form {
+<<<<<<< HEAD
     display: flex; /* フレックスボックス */
     flex-direction: column; /* 縦方向に並べる */
     align-items: center; /* 横方向中央揃え */
     margin-bottom: 1.5em; /* 下に1.5em余白 */
+=======
+  display: flex; /* フレックスボックスで配置 */
+  flex-direction: column; /* 縦並び */
+  align-items: center; /* 横中央寄せ */
+  margin-bottom: 1.5em; /* 下に余白 */
+>>>>>>> branch 'feature_yasuda_ver2' of https://github.com/RinaTawaratsumida/quiz-de-introduction.git
 }
 
+/* テキスト回答用の入力欄 */
 .quiz-answer-input {
+<<<<<<< HEAD
     width: 100%; /* 幅100% */
     max-width: 390px; /* 最大幅390px */
     padding: 0.8em; /* 内側余白0.8em */
@@ -81,15 +173,35 @@ body {
     background: #f4f8ff; /* 薄い青背景 */
     margin-bottom: 1em; /* 下に1em余白 */
     transition: border 0.2s; /* 枠線の変化を0.2秒でアニメーション */
+=======
+  width: 100%; /* 幅いっぱい */
+  max-width: 260px; /* 最大幅260px */
+  padding: 0.8em; /* 内側余白 */
+  font-size: 1em; /* 標準文字サイズ */
+  border: 1.5px solid #bdd0ef; /* 薄い青枠 */
+  border-radius: 8px; /* 角丸 */
+  background: #f4f8ff; /* 薄い青背景 */
+  margin-bottom: 1em; /* 下に余白 */
+  transition: border 0.2s; /* フォーカス時の枠線変更をアニメーション */
+>>>>>>> branch 'feature_yasuda_ver2' of https://github.com/RinaTawaratsumida/quiz-de-introduction.git
 }
 
+/* 入力欄にフォーカスした時 */
 .quiz-answer-input:focus {
+<<<<<<< HEAD
     border: 1.5px solid #4682eb; /* フォーカス時に濃い青の枠線 */
     outline: none; /* デフォルトのアウトラインを消す */
     background: #eaf1fb; /* フォーカス時の背景色 */
+=======
+  border: 1.5px solid #4682eb; /* 濃い青の枠線 */
+  outline: none; /* ブラウザ標準の青いアウトラインを消す */
+  background: #eaf1fb; /* さらに淡い青背景 */
+>>>>>>> branch 'feature_yasuda_ver2' of https://github.com/RinaTawaratsumida/quiz-de-introduction.git
 }
 
+/* 回答送信ボタン */
 .quiz-submit {
+<<<<<<< HEAD
     width: 100%; /* 幅100% */
     max-width: 270px; /* 最大幅270px */
     padding: 0.9em; /* 内側余白0.9em */
@@ -100,12 +212,30 @@ body {
     font-size: 1em; /* 文字サイズ1em */
     cursor: pointer; /* ポインターに */
     transition: background 0.2s; /* 背景色変化を0.2秒で */
+=======
+  width: 100%; /* 幅いっぱい */
+  max-width: 180px; /* 最大幅180px */
+  padding: 0.9em; /* 内側余白 */
+  background: #5aba47; /* 緑背景 */
+  color: #fff; /* 白文字 */
+  border: none; /* 枠線なし */
+  border-radius: 8px; /* 角丸 */
+  font-size: 1em; /* 標準文字サイズ */
+  cursor: pointer; /* カーソルを指に */
+  transition: background 0.2s; /* ホバー時の色変化をスムーズに */
+>>>>>>> branch 'feature_yasuda_ver2' of https://github.com/RinaTawaratsumida/quiz-de-introduction.git
 }
 
+/* 回答ボタンにマウスを乗せた時 */
 .quiz-submit:hover {
+<<<<<<< HEAD
     background: #428d38; /* ホバー時は濃い緑に */
+=======
+  background: #428d38; /* 少し濃い緑に */
+>>>>>>> branch 'feature_yasuda_ver2' of https://github.com/RinaTawaratsumida/quiz-de-introduction.git
 }
 
+<<<<<<< HEAD
 /* 記述式(text.jsp)専用 横幅拡大 */
 .quiz-answer-form.text-form .quiz-answer-input {
     max-width: 90%; /* 最大幅を90%に拡大 */
@@ -117,9 +247,15 @@ body {
 
 /* ======================================= */
 /* 選択肢フォーム（2×2グリッド） */
+=======
+/* ======================================= */
+/* 選択肢用フォーム（select.jsp） */
+>>>>>>> branch 'feature_yasuda_ver2' of https://github.com/RinaTawaratsumida/quiz-de-introduction.git
 /* ======================================= */
 
+/* 4択ボタンを2×2のグリッドで配置 */
 .quiz-answer-form.choice-buttons {
+<<<<<<< HEAD
     display: grid; /* グリッドレイアウト */
     grid-template-columns: repeat(2, 1fr); /* 2列 */
     grid-template-rows: repeat(2, auto); /* 2行 */
@@ -127,9 +263,20 @@ body {
     justify-content: center; /* グリッド全体を中央揃え */
     margin-bottom: 1.5em; /* 下に1.5em余白 */
     place-items: center; /* グリッド内アイテムを中央揃え */
+=======
+  display: grid; /* グリッドレイアウト */
+  grid-template-columns: repeat(2, 1fr); /* 2列均等幅 */
+  grid-template-rows: repeat(2, auto); /* 2行 */
+  gap: 15px 20px; /* 行間15px、列間20px */
+  justify-content: center; /* 横方向中央寄せ */
+  margin-bottom: 1.5em; /* 下に余白 */
+  place-items: center; /* 各セル内も中央寄せ */
+>>>>>>> branch 'feature_yasuda_ver2' of https://github.com/RinaTawaratsumida/quiz-de-introduction.git
 }
 
+/* 選択肢のボタン基本デザイン */
 .quiz-answer-form.choice-buttons button {
+<<<<<<< HEAD
     padding: 0.8em 1.2em; /* 内側余白上下0.8em、左右1.2em */
     font-size: 1em; /* 文字サイズ1em */
     border-radius: 8px; /* 角丸8px */
@@ -140,21 +287,39 @@ body {
     background-color: transparent; /* 背景透過 */
     color: inherit; /* 親要素の文字色を継承 */
     user-select: none; /* テキスト選択不可 */
+=======
+  padding: 0.8em 1.2em; /* 内側余白 */
+  font-size: 1em; /* 標準文字サイズ */
+  border-radius: 8px; /* 角丸 */
+  cursor: pointer; /* 指カーソル */
+  transition: background-color 0.3s ease; /* ホバー時の色変化をスムーズに */
+  min-width: 120px; /* 最低幅を確保 */
+  border: 1.5px solid transparent; /* 枠線は透明で確保 */
+  background-color: transparent; /* 初期は透明背景 */
+  color: inherit; /* 親の文字色を継承 */
+  user-select: none; /* テキスト選択不可 */
+>>>>>>> branch 'feature_yasuda_ver2' of https://github.com/RinaTawaratsumida/quiz-de-introduction.git
 }
 
-/* ======================================= */
-/* select.jsp 専用スタイル */
-/* ======================================= */
-
+/* select.jsp 専用の背景色 */
 body.select-page {
+<<<<<<< HEAD
     background-color: #f0f4ff; /* 背景を薄い青に */
     display: flex; /* フレックスボックス */
     justify-content: center; /* 横方向中央揃え */
     align-items: center; /* 縦方向中央揃え */
     min-height: 100vh; /* 画面高さいっぱい */
+=======
+  background-color: #f0f4ff; /* 薄い水色背景 */
+>>>>>>> branch 'feature_yasuda_ver2' of https://github.com/RinaTawaratsumida/quiz-de-introduction.git
 }
 
+<<<<<<< HEAD
+=======
+/* 選択肢ボタンの本番デザイン */
+>>>>>>> branch 'feature_yasuda_ver2' of https://github.com/RinaTawaratsumida/quiz-de-introduction.git
 body.select-page .quiz-answer-form.choice-buttons button {
+<<<<<<< HEAD
     width: 315px; /* 横幅315px */
     height: 150px; /* 高さ150px */
 
@@ -170,21 +335,58 @@ body.select-page .quiz-answer-form.choice-buttons button {
     font-weight: 600; /* 太字 */
     line-height: 1.4; /* 行間1.4 */
     padding: 0.5em; /* 内側余白0.5em */
+=======
+  width: 210px; /* 幅210px固定 */
+  height: 100px; /* 高さ100px固定 */
+  display: flex; /* ボタン内もフレックスで中央寄せ */
+  flex-direction: column; /* 縦方向配置 */
+  align-items: center; /* 横中央 */
+  justify-content: center; /* 縦中央 */
+  text-align: center; /* テキスト中央寄せ */
+  border: 2px solid #4682eb; /* 青い枠線 */
+  background-color: #e0ebff; /* 薄い青背景 */
+  color: #1a3a8a; /* 濃い青文字 */
+  font-weight: 600; /* 太字 */
+  line-height: 1.4; /* 行間少し広め */
+  padding: 0.5em; /* 内側余白 */
+>>>>>>> branch 'feature_yasuda_ver2' of https://github.com/RinaTawaratsumida/quiz-de-introduction.git
 }
 
+/* マウスホバー時の選択肢ボタン */
 body.select-page .quiz-answer-form.choice-buttons button:hover {
+<<<<<<< HEAD
     background-color: #a3bff7; /* ホバー時は明るい青 */
     color: #fff; /* 文字白 */
     border-color: #3561c7; /* 枠線濃い青 */
+=======
+  background-color: #a3bff7; /* 少し濃い青 */
+  color: #fff; /* 文字は白 */
+  border-color: #3561c7; /* 枠線も濃い青に */
+>>>>>>> branch 'feature_yasuda_ver2' of https://github.com/RinaTawaratsumida/quiz-de-introduction.git
 }
 
+<<<<<<< HEAD
+=======
+/* 選択済みボタンを強調（JSで.selectedを付与） */
+>>>>>>> branch 'feature_yasuda_ver2' of https://github.com/RinaTawaratsumida/quiz-de-introduction.git
 body.select-page .quiz-answer-form.choice-buttons button.selected {
+<<<<<<< HEAD
     background-color: #3561c7; /* 選択時の背景色 */
     color: #fff; /* 文字白 */
     border-color: #2a4d9f; /* 枠線 */
+=======
+  background-color: #3561c7; /* 濃い青背景 */
+  color: #fff; /* 白文字 */
+  border-color: #2a4d9f; /* 濃い青枠線 */
+>>>>>>> branch 'feature_yasuda_ver2' of https://github.com/RinaTawaratsumida/quiz-de-introduction.git
 }
 
+<<<<<<< HEAD
+=======
+/* フォーカス時の視認性向上 */
+>>>>>>> branch 'feature_yasuda_ver2' of https://github.com/RinaTawaratsumida/quiz-de-introduction.git
 body.select-page .quiz-answer-form.choice-buttons button:focus {
+<<<<<<< HEAD
     outline: none; /* アウトライン消す */
     box-shadow: 0 0 3px 2px rgba(70, 130, 235, 0.7); /* 青い光の影 */
 }
@@ -326,4 +528,127 @@ body.start-page {
 .startBtn:active {
     transform: translateY(0); /* 押したときの戻り */
     box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* 軽い影 */
+=======
+  outline: none; /* 標準アウトライン消去 */
+  box-shadow: 0 0 3px 2px rgba(70,130,235,0.7); /* 青い光を付与 */
+>>>>>>> branch 'feature_yasuda_ver2' of https://github.com/RinaTawaratsumida/quiz-de-introduction.git
+}
+
+/* ======================================= */
+/* start.jsp 専用スタイル */
+/* ======================================= */
+
+body.start-page {
+  background: linear-gradient(135deg, #f8fafc, #e0ebff); /* 斜めグラデ背景 */
+  display: flex; /* 中央寄せのためフレックス */
+  justify-content: center; /* 横中央寄せ */
+  align-items: center; /* 縦中央寄せ */
+  height: 100vh; /* 画面全体高さ */
+}
+
+/* スタートボタン群のコンテナ */
+#start {
+  display: flex; /* フレックスレイアウト */
+  flex-direction: column; /* 縦並び */
+  gap: 20px; /* ボタン間20px */
+}
+
+/* 各フォームを中央寄せ */
+#start form {
+  display: flex;
+  justify-content: center;
+}
+
+/* スタートボタン */
+#startBtn {
+  width: 220px;
+  height: 70px;
+  font-size: 1.3em; /* 大きめ文字 */
+  font-weight: 600; /* 太字 */
+  color: #fff; /* 白文字 */
+  background-color: #4682eb; /* 青背景 */
+  border: none; /* 枠線なし */
+  border-radius: 12px; /* 角丸 */
+  cursor: pointer; /* 指カーソル */
+  transition: 0.25s; /* ホバー時のアニメーション */
+}
+
+/* ホバー時のスタートボタン */
+#startBtn:hover {
+  background-color: #3561c7; /* 濃い青に */
+  transform: translateY(-2px); /* 浮くような演出 */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* 影を追加 */
+}
+
+/* クリック時のスタートボタン */
+#startBtn:active {
+  transform: translateY(0); /* 元に戻る */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* 影を弱める */
+}
+
+/* ======================================= */
+/* result.jsp 専用スタイル */
+/* ======================================= */
+
+body.result-page {
+  background: linear-gradient(135deg, #f8fafc, #e0ebff); /* 斜めグラデ背景 */
+  display: flex; /* 中央寄せ用フレックス */
+  justify-content: center; /* 横中央 */
+  align-items: center; /* 縦中央 */
+  height: 100vh; /* 全画面高さ */
+  font-family: "Segoe UI", "Hiragino Sans", Arial, sans-serif; /* フォント指定 */
+}
+
+/* 結果表示用ボックス */
+.result-container {
+  background: #fff; /* 白背景 */
+  border-radius: 16px; /* 角丸 */
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15); /* 少し強めの影 */
+  padding: 2.5em 3em; /* 内側余白 */
+  text-align: center; /* 中央寄せ */
+  max-width: 400px; /* 最大幅400px */
+  width: 90%; /* スマホでも縮む */
+}
+
+/* 結果の各行 */
+.result-container p {
+  margin: 0.8em 0; /* 上下に余白 */
+  font-size: 1.2em; /* 少し大きめ文字 */
+  color: #333; /* 濃いグレー */
+  font-weight: 500; /* やや太字 */
+}
+
+/* 最初の行「お疲れ様でした」だけ強調 */
+.result-container p:first-child {
+  font-size: 1.5em; /* さらに大きめ */
+  font-weight: 700; /* 太字強め */
+  margin-bottom: 1em; /* 下に余白 */
+}
+
+/* resetボタンをスタートボタン風に */
+.result-container #startBtn {
+  width: 200px; /* 幅200px */
+  height: 60px; /* 高さ60px */
+  font-size: 1.2em; /* 少し大きめ */
+  font-weight: 600; /* 太字 */
+  color: #fff; /* 白文字 */
+  background-color: #4682eb; /* 青背景 */
+  border: none; /* 枠線なし */
+  border-radius: 12px; /* 角丸 */
+  cursor: pointer; /* 指カーソル */
+  margin-top: 1.5em; /* 上に余白 */
+  transition: 0.25s; /* ホバー時のアニメーション */
+}
+
+/* resetボタンにホバー時 */
+.result-container #startBtn:hover {
+  background-color: #3561c7; /* 濃い青に */
+  transform: translateY(-2px); /* 浮く演出 */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15); /* 影追加 */
+}
+
+/* resetボタン押下時 */
+.result-container #startBtn:active {
+  transform: translateY(0); /* 元に戻る */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* 影を弱める */
 }
