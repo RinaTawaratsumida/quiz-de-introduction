@@ -8,11 +8,16 @@
 <title>不正解画面</title>
 </head>
 <body>
-<div>不正解</div>
-	<form action="QuizServlet" method="get">
-		<p>
-			<input type ="submit" value="next" id="nextBtn">
-		</p>
-	</form>
+
+    <!-- 不正解のメッセージを表示 -->
+    <div>不正解</div>
+
+    <!-- 次の問題に進むボタン -->
+    <form action="QuizServlet" method="get">
+        <p>
+            <input type="submit" value="next" id="nextBtn">
+        </p>
+    </form>
+
 </body>
 </html>
