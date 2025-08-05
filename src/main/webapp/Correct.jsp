@@ -8,16 +8,24 @@
 <title>正解画面</title>
 </head>
 <body>
+
+	<!-- 正解のメッセージを表示 -->
 	<div>正解</div>
+
 	<%
-	String explanation = (String) session.getAttribute("explanation");
+		// セッションから解説文を取得
+		String explanation = (String) session.getAttribute("explanation");
 	%>
 
-	<p><%=explanation%></p>
+	<!-- 正解の解説を表示 -->
+	<p><%= explanation %></p>
+
+	<!-- 次の問題へ進むボタン -->
 	<form action="QuizServlet" method="get">
 		<p>
 			<input type="submit" value="next" id="nextBtn">
 		</p>
 	</form>
+
 </body>
 </html>
