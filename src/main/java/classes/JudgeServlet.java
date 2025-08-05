@@ -33,7 +33,7 @@ public class JudgeServlet extends HttpServlet {
 		if (incorrectCount == null) {
 			incorrectCount = 0;
 		}
-
+ 
 		// jspから送られた解答取得
 		String answer = request.getParameter("answer");
 		String Judge_answer = (String) session.getAttribute("answer").toString();
