@@ -8,24 +8,34 @@
 <title>記述式クイズ</title>
 </head>
 <body>
+
 	<%
-	String question_text = (String) request.getAttribute("question_text");
-	Integer quizCount = (Integer) session.getAttribute("quizCount");
+		// サーブレットから渡されたデータを取得
+		String question_text = (String) request.getAttribute("question_text"); // 問題文
+		Integer quizCount = (Integer) session.getAttribute("quizCount");      // 現在の問題番号
 	%>
+
 	<div class="quiz-container">
-		<!-- 問題文 -->
+
+		<!-- 現在の問題数を表示 -->
 		<div class="quiz-counter">
-			<%=quizCount + 1%>問目
+			<%= quizCount + 1 %>問目
 		</div>
-		<!-- 問題文 -->
+
+		<!-- 問題文を表示 -->
 		<div class="quiz-question">
-			<%=question_text%>
+			<%= question_text %>
 		</div>
-		<!-- テキスト解答フォーム -->
+
+		<!-- 記述式の回答フォーム（テキスト入力） -->
 		<form class="quiz-answer-form" action="JudgeServlet" method="get">
-			<input class="quiz-answer-input" type="text" name="answer"> <input
-				class="quiz-submit" type="submit" value="送信">
+			<!-- ユーザーの回答を入力 -->
+			<input class="quiz-answer-input" type="text" name="answer">
+			<!-- 回答を送信するボタン -->
+			<input class="quiz-submit" type="submit" value="送信">
 		</form>
+
 	</div>
+
 </body>
 </html>
