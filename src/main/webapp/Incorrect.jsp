@@ -9,21 +9,21 @@
 </head>
 <body class="result-page">
 	<%
-	// セッションに保存された explanation を取得
+	// セッションに保存された「解説文」を取得
+	// この画面では正解の答えは使わず、解説だけ表示
 	String explanation = (String) session.getAttribute("explanation");
 	%>
 
 	<div class="container">
-		<!-- 不正解表示 -->
+		<!-- 不正解の見出しを表示（CSSクラスwrongで赤色などの装飾想定） -->
 		<h1 class="result-title wrong">不正解</h1>
 
-		<!-- 解説（存在する場合のみ表示） -->
+		<!-- 解説文を表示するブロック -->
 		<div class="result-explanation">
-			<%=explanation%>
+			<%=explanation%>  <!-- JSPで解説文を出力 -->
 		</div>
 
-
-		<!-- 次へボタン -->
+		<!-- 次の問題に進むボタン（QuizServletにGET送信） -->
 		<form action="QuizServlet" method="get">
 			<button type="submit" class="next-btn">次の問題へ</button>
 		</form>

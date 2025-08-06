@@ -9,65 +9,75 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-@WebServlet("/JudgeServlet")
+@WebServlet("/JudgeServlet") // このサーブレットは /JudgeServlet のURLで呼び出される
 public class JudgeServlet extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-	private static final int maxQuiz = 3;
+    private static final long serialVersionUID = 1L;
 
-	protected void doGet(HttpServletRequest request, HttpServletResponse response)
-			throws ServletException, IOException {
+    // 出題する最大問題数（ここでクイズの回数を制御）
+    private static final int maxQuiz = 3;
 
-		HttpSession session = request.getSession(false); // true = なければ新規作成
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
 
-		// セッションからカウントを取得、なければ 0 に初期化
-		Integer quizCount = (Integer) session.getAttribute("quizCount");
-		Integer correctCount = (Integer) session.getAttribute("correctCount");
-		Integer incorrectCount = (Integer) session.getAttribute("incorrectCount");
+        // 既存のセッションを取得（falseなので新規作成はしない）
+        HttpSession session = request.getSession(false);
 
-		if (quizCount == null) {
-			quizCount = 0;
-		}
-		if (correctCount == null) {
-			correctCount = 0;
-		}
-		if (incorrectCount == null) {
-			incorrectCount = 0;
-		}
- 
-		// jspから送られた解答取得
-		String answer = request.getParameter("answer");
-		String Judge_answer = (String) session.getAttribute("answer").toString();
+        // セッションからカウントを取得、なければ 0 に初期化
+        Integer quizCount = (Integer) session.getAttribute("quizCount");
+        Integer correctCount = (Integer) session.getAttribute("correctCount");
+        Integer incorrectCount = (Integer) session.getAttribute("incorrectCount");
 
-		// カウント更新
-		quizCount++; 
-		if (answer.equals(Judge_answer)) {
-			correctCount++;
-		} else {
-			incorrectCount++;
-		}
- 
-		// セッションに保存し直す
-		session.setAttribute("quizCount", quizCount);
-		session.setAttribute("correctCount", correctCount);
-		session.setAttribute("incorrectCount", incorrectCount);
+        if (quizCount == null) {
+            quizCount = 0;
+        }
+        if (correctCount == null) {
+            correctCount = 0;
+        }
+        if (incorrectCount == null) {
+            incorrectCount = 0;
+        }
 
-		System.out.println("解答数: " + quizCount);
-		System.out.println("せいかい: " + correctCount);
-		System.out.println("はずれ: " + incorrectCount);
+        // JSPから送られた回答を取得
+        String answer = request.getParameter("answer"); // ユーザーが入力した答え
+        String Judge_answer = (String) session.getAttribute("answer").toString(); // 正解（セッションに保持されている）
 
-		if (quizCount == maxQuiz) {
-			if(answer.equals(Judge_answer)){
-						request.getRequestDispatcher("/LastCorrect.jsp").forward(request, response);
-					}else{
-						request.getRequestDispatcher("/LastIncorrect.jsp").forward(request, response);
-					}
-		}else if(answer.equals(Judge_answer)){
-			System.out.println("正解");
-			//request.getRequestDispatcher("/Correct.jsp").forward(request, response);
-			request.getRequestDispatcher("/Correct.jsp").forward(request, response);
-		}else{
-			//System.out.println("はずれ");
-			request.getRequestDispatcher("/Incorrect.jsp").forward(request, response);
-		}
-	}
+        // 出題数をインクリメント
+        quizCount++; 
+
+        // 正誤判定してカウントを更新
+        if (answer.equals(Judge_answer)) {
+            correctCount++; // 正解数を増加
+        } else {
+            incorrectCount++; // 不正解数を増加
+        }
+
+        // 最新のカウントをセッションに保存
+        session.setAttribute("quizCount", quizCount);
+        session.setAttribute("correctCount", correctCount);
+        session.setAttribute("incorrectCount", incorrectCount);
+
+        // デバッグ用ログ出力（コンソールに表示）
+        System.out.println("解答数: " + quizCount);
+        System.out.println("せいかい: " + correctCount);
+        System.out.println("はずれ: " + incorrectCount);
+
+        // 出題が最後の問題かどうかで分岐
+        if (quizCount == maxQuiz) {
+            // 最後の問題の場合はラスト用JSPに遷移
+            if(answer.equals(Judge_answer)){
+                // 最後の問題が正解の場合
+                request.getRequestDispatcher("/LastCorrect.jsp").forward(request, response);
+            } else {
+                // 最後の問題が不正解の場合
+                request.getRequestDispatcher("/LastIncorrect.jsp").forward(request, response);
+            }
+        } else if(answer.equals(Judge_answer)) {
+            // まだ最後でなく、正解した場合
+            System.out.println("正解");
+            request.getRequestDispatcher("/Correct.jsp").forward(request, response);
+        } else {
+            // まだ最後でなく、不正解の場合
+            request.getRequestDispatcher("/Incorrect.jsp").forward(request, response);
+        }
+    }
 }
